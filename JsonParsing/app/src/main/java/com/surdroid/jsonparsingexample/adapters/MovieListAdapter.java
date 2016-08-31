@@ -1,4 +1,4 @@
-package com.surdroid.jsonparsingexample;
+package com.surdroid.jsonparsingexample.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -10,6 +10,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.surdroid.jsonparsingexample.R;
 import com.surdroid.jsonparsingexample.rest.response.Result;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.surdroid.jsonparsingexample;
+package com.surdroid.jsonparsingexample.activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
+import com.surdroid.jsonparsingexample.R;
 import com.surdroid.jsonparsingexample.rest.response.Result;
 
 public class DetailActivity extends AppCompatActivity {
