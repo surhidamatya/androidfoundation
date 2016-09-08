@@ -1,6 +1,5 @@
 package com.surdroid.understandingservice;
 
-import android.app.ExpandableListActivity;
 import android.app.IntentService;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -25,7 +24,7 @@ public class ExampleIntentService extends IntentService {
 
     private String IMAGE_DOWNLOAD_URL = "http://www.zastavki.com/pictures/1920x1200/2010/World_Australia_River_in_Australia_022164_.jpg";
 
-    private static String TAG = ExampleService.class.getSimpleName();
+    private static String TAG = ExampleIntentService.class.getSimpleName();
 
     /**
      * Creates an IntentService.  Invoked by your subclass's constructor.
@@ -50,16 +49,15 @@ public class ExampleIntentService extends IntentService {
          *
          */
 
-//        startValueCounting();
-// Sleep to waste time
-        sleep(2000);
-        downloadImage(IMAGE_DOWNLOAD_URL);
+        startValueCounting();
+
+//        downloadImage(IMAGE_DOWNLOAD_URL);
 
     }
 
     @Override
     public void onDestroy() {
-        Toast.makeText(ExampleIntentService.this, "Image downloaded", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "On Destroy Called", Toast.LENGTH_SHORT).show();
         super.onDestroy();
         Log.i(TAG + "---", "onDestroy");
     }
@@ -150,6 +148,17 @@ public class ExampleIntentService extends IntentService {
         } catch (InterruptedException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
+        }
+
+
+    }
+
+    private void startValueCounting() {
+
+        for (int i = 0; i < 10; i++) {
+            Log.i(TAG, "startValueCounting: " + i);
+            // Sleep to waste time
+            sleep(1000);
         }
     }
 

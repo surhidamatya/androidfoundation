@@ -19,12 +19,12 @@ import java.util.ArrayList;
  * Created by ashish on 7/12/2016.
  */
 public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.MovieListViewHolder> {
-    private ArrayList<Result> listView;
+    private ArrayList<Result> movieListingDetailsArrayList;
     private Context context;
     private MovieItemClickListener movieItemClickListener;
 
     public MovieListAdapter(Context context, ArrayList<Result> listView) {
-        this.listView = listView;
+        this.movieListingDetailsArrayList = listView;
         this.context = context;
     }
 
@@ -41,20 +41,18 @@ public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.Movi
 
     @Override
     public void onBindViewHolder(MovieListViewHolder holder, final int position) {
-        holder.tvMovieTitle.setText(listView.get(position).getOriginalTitle());
-//        holder.ivMovieImage.setImageResource(listView.get(position).getMoviePosterUrl());
+        holder.tvMovieTitle.setText(movieListingDetailsArrayList.get(position).getOriginalTitle());
         Glide.with(context)
-                .load(listView.get(position).getPosterPath())
+                .load("http://image.tmdb.org/t/p/w185//"+movieListingDetailsArrayList.get(position).getPosterPath())
                 .into(holder.ivMovieImage);
-        holder.tvmovieReleaseDate.setText(listView.get(position).getReleaseDate());
-        holder.tvMovieRatings.setText("" + listView.get(position).getVoteAverage());
+        holder.tvmovieReleaseDate.setText(movieListingDetailsArrayList.get(position).getReleaseDate());
+        holder.tvMovieRatings.setText("" + movieListingDetailsArrayList.get(position).getVoteAverage());
 
-        holder.tvMovieTitle.setTag(listView.get(position));
         holder.rlMovieContainer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (movieItemClickListener != null) {
-                    movieItemClickListener.onClick(listView.get(position));
+                    movieItemClickListener.onClick(movieListingDetailsArrayList.get(position));
                 }
             }
         });
@@ -62,11 +60,11 @@ public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.Movi
 
     @Override
     public int getItemCount() {
-        return this.listView.size();
+        return this.movieListingDetailsArrayList.size();
     }
 
 
-    public static class MovieListViewHolder extends RecyclerView.ViewHolder{
+    public static class MovieListViewHolder extends RecyclerView.ViewHolder {
         private TextView tvMovieTitle, tvMovieRatings, tvmovieReleaseDate;
         private ImageView ivMovieImage;
         private RelativeLayout rlMovieContainer;
@@ -74,10 +72,10 @@ public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.Movi
         public MovieListViewHolder(View itemView) {
             super(itemView);
 
-            tvMovieTitle = (TextView) itemView.findViewById(R.id.movie_title);
-            tvMovieRatings = (TextView) itemView.findViewById(R.id.movie_ratings);
-            tvmovieReleaseDate = (TextView) itemView.findViewById(R.id.movie_releasedate);
-            ivMovieImage = (ImageView) itemView.findViewById(R.id.movie_image);
+            tvMovieTitle = (TextView) itemView.findViewById(R.id.tv_movie_title);
+            tvMovieRatings = (TextView) itemView.findViewById(R.id.tv_movie_ratings);
+            tvmovieReleaseDate = (TextView) itemView.findViewById(R.id.tv_movie_release_date);
+            ivMovieImage = (ImageView) itemView.findViewById(R.id.iv_movie_poster);
             rlMovieContainer = (RelativeLayout) itemView.findViewById(R.id.rl_movie_container);
 
         }

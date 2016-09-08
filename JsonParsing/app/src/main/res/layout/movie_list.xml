@@ -16,26 +16,26 @@
 
 
         <TextView
-            android:id="@+id/movie_title"
+            android:id="@+id/tv_movie_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Title" />
 
         <TextView
-            android:id="@+id/movie_ratings"
+            android:id="@+id/tv_movie_ratings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ratings" />
 
         <TextView
-            android:id="@+id/movie_releasedate"
+            android:id="@+id/tv_movie_release_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ReleaseDate" />
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/movie_image"
+        android:id="@+id/iv_movie_poster"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
