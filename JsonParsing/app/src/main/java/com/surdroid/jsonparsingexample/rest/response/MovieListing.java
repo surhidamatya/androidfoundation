@@ -25,21 +25,6 @@ public class MovieListing implements Parcelable {
     @SerializedName("total_results")
     private Integer totalResults;
 
-    protected MovieListing(Parcel in) {
-    }
-
-    public static final Creator<MovieListing> CREATOR = new Creator<MovieListing>() {
-        @Override
-        public MovieListing createFromParcel(Parcel in) {
-            return new MovieListing(in);
-        }
-
-        @Override
-        public MovieListing[] newArray(int size) {
-            return new MovieListing[size];
-        }
-    };
-
     /**
      * @return The page
      */
@@ -109,6 +94,23 @@ public class MovieListing implements Parcelable {
     public void setTotalResults(Integer totalResults) {
         this.totalResults = totalResults;
     }
+
+    /* ## Parcelable Implementation ## */
+
+    protected MovieListing(Parcel in) {
+    }
+
+    public static final Creator<MovieListing> CREATOR = new Creator<MovieListing>() {
+        @Override
+        public MovieListing createFromParcel(Parcel in) {
+            return new MovieListing(in);
+        }
+
+        @Override
+        public MovieListing[] newArray(int size) {
+            return new MovieListing[size];
+        }
+    };
 
     @Override
     public int describeContents() {

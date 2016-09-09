@@ -4,10 +4,39 @@ package com.surdroid.jsonparsingexample.rest.response;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class Dates implements Parcelable{
+public class Dates implements Parcelable {
     private String maximum;
     private String minimum;
 
+    /**
+     * @return The maximum
+     */
+    public String getMaximum() {
+        return maximum;
+    }
+
+    /**
+     * @param maximum The maximum
+     */
+    public void setMaximum(String maximum) {
+        this.maximum = maximum;
+    }
+
+    /**
+     * @return The minimum
+     */
+    public String getMinimum() {
+        return minimum;
+    }
+
+    /**
+     * @param minimum The minimum
+     */
+    public void setMinimum(String minimum) {
+        this.minimum = minimum;
+    }
+
+    /* ## Parcelable Implementation ## */
     protected Dates(Parcel in) {
         maximum = in.readString();
         minimum = in.readString();
@@ -24,42 +53,6 @@ public class Dates implements Parcelable{
             return new Dates[size];
         }
     };
-
-    /**
-     * 
-     * @return
-     *     The maximum
-     */
-    public String getMaximum() {
-        return maximum;
-    }
-
-    /**
-     * 
-     * @param maximum
-     *     The maximum
-     */
-    public void setMaximum(String maximum) {
-        this.maximum = maximum;
-    }
-
-    /**
-     * 
-     * @return
-     *     The minimum
-     */
-    public String getMinimum() {
-        return minimum;
-    }
-
-    /**
-     * 
-     * @param minimum
-     *     The minimum
-     */
-    public void setMinimum(String minimum) {
-        this.minimum = minimum;
-    }
 
     @Override
     public int describeContents() {
