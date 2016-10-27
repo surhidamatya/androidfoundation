@@ -15,6 +15,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".BounceActivity" />
+        <activity android:name=".BlinkActivity" />
+        <activity android:name=".CrossfadeActivity" />
+        <activity android:name=".FadeInActivity" />
+        <activity android:name=".FadeOutActivity" />
+        <activity android:name=".MoveActivity" />
+        <activity android:name=".RotateActivity" />
+        <activity android:name=".SequentialActivity" />
+        <activity android:name=".SlideDownActivity" />
+        <activity android:name=".SlideUpActivity" />
+        <activity android:name=".TogetherActivity" />
+        <activity android:name=".ZoomInActivity" />
+        <activity android:name=".ZoomOutActivity" />
     </application>
 
 </manifest>

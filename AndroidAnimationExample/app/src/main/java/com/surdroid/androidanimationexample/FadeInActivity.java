@@ -28,8 +28,9 @@ public class FadeInActivity extends Activity implements AnimationListener {
 		btnStart = (Button) findViewById(R.id.btnStart);
 
 		// load the animation
-		animFadein = AnimationUtils.loadAnimation(getApplicationContext(),
-				R.anim.fade_in);
+		/*animFadein = AnimationUtils.loadAnimation(getApplicationContext(),
+				R.anim.fade_in);*/
+		animFadein = AnimationUtils.loadAnimation(this, R.anim.fade_in);
 		
 		// set animation listener
 		animFadein.setAnimationListener(this);

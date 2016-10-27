@@ -50,7 +50,8 @@ public class ZoomInActivity extends Activity implements AnimationListener {
 		// Take any action after completing the animation
 
 		// check for zoom in animation
-		if (animation == animZoomIn) {			
+		if (animation == animZoomIn) {
+
 		}
 
 	}
