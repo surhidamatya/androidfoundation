@@ -57,9 +57,9 @@ public class ListExplicitActivityPassedValue extends AppCompatActivity {
      * Return an value to {@link ListExplicitActivity}
      */
     public void passValueParentActivity(View v) {
-        Intent intent = new Intent();
+        /*Intent intent = new Intent();
         intent.putExtra(Constants.VALUE_ONE, "Passed from called Activity for startActivityforResult");
-        setResult(ListExplicitActivity.RESULT_CODE, intent);
+        setResult(ListExplicitActivity.RESULT_CODE, intent);*/
         finish();
     }
 }

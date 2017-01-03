@@ -15,7 +15,7 @@ public class ZoomInActivity extends Activity implements AnimationListener {
 	Button btnStart;
 
 	// Animation
-	Animation animZoomIn;
+	Animation animZoomIn, animZoomOut;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +29,8 @@ public class ZoomInActivity extends Activity implements AnimationListener {
 		// load the animation
 		animZoomIn = AnimationUtils.loadAnimation(getApplicationContext(),
 				R.anim.zoom_in);
+
+        animZoomOut = AnimationUtils.loadAnimation(this, R.anim.zoom_out);
 		
 		// set animation listener
 		animZoomIn.setAnimationListener(this);
@@ -51,6 +53,7 @@ public class ZoomInActivity extends Activity implements AnimationListener {
 
 		// check for zoom in animation
 		if (animation == animZoomIn) {
+            imgPoster.startAnimation(animZoomOut);
 
 		}
 

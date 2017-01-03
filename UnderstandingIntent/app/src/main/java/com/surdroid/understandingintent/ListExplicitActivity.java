@@ -1,8 +1,8 @@
 package com.surdroid.understandingintent;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -74,7 +74,6 @@ public class ListExplicitActivity extends AppCompatActivity {
     /**
      * Showcase Intent can be used to wait for an result if needed
      * {@link ListExplicitActivityPassedValue} is started and waits for result from it.
-     *
      */
     public void startNewActivityForResult(View v) {
         Intent passIntentValue = new Intent(this, ListExplicitActivityPassedValue.class);
@@ -91,6 +90,9 @@ public class ListExplicitActivity extends AppCompatActivity {
             txtVwResult.setVisibility(View.VISIBLE);
             String message = data.getStringExtra(Constants.VALUE_ONE);
             txtVwResult.setText(message);
+        } else {
+            txtVwResult.setVisibility(View.VISIBLE);
+            txtVwResult.setText("No value");
         }
     }
 }

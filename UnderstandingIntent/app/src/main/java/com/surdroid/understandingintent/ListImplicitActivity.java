@@ -2,8 +2,8 @@ package com.surdroid.understandingintent;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 /**
@@ -38,8 +38,6 @@ public class ListImplicitActivity extends AppCompatActivity {
         intent.putExtra(Intent.EXTRA_SUBJECT, "subject");
         intent.putExtra(Intent.EXTRA_TEXT, "mail body");
         startActivity(Intent.createChooser(intent, ""));
-
-
     }
 
     public void launchBrowser(View v) {

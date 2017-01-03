@@ -36,12 +36,12 @@ public class ExampleService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.i(TAG + "---", "onStartCommand");
-//        simulateLowMemory();
+        simulateLowMemory();
         /**
          * Service is not restarted. Used for services which are periodically triggered anyway.
          * The service is only restarted if the runtime has pending startService() calls since the service termination.
          */
-        return START_NOT_STICKY;
+//        return START_NOT_STICKY;
         /**
          * Similar to Service.START_STICKY but the original
          * Intent is re-delivered to the onStartCommand method.
@@ -52,14 +52,14 @@ public class ExampleService extends Service {
          * Intent data passed to the onStartCommand method is null.
          * Used for services which manages their own state and do not depend on the Intent data.
          */
-//        return START_STICKY;
+        return START_STICKY;
     }
 
     @Override
     public void onDestroy() {
         Toast.makeText(ExampleService.this, "Image downloaded", Toast.LENGTH_SHORT).show();
-        super.onDestroy();
         Log.i(TAG + "---", "onDestroy");
+        super.onDestroy();
     }
 
     /**

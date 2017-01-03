@@ -11,21 +11,22 @@
     tools:context="com.surdroid.understandingintent.ListImplicitActivity">
 
     <Button
-    android:onClick="makeCall"
-    android:text="Make a Call"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="makeCall"
+        android:text="Make a Call" />
 
     <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:onClick="sendEmail"
-        android:text="Send Email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:text="Send Email" />
+
     <Button
-        android:onClick="launchBrowser"
-        android:text="Launch Browser"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:onClick="launchBrowser"
+        android:text="Launch Browser" />
 
 
 </LinearLayout>

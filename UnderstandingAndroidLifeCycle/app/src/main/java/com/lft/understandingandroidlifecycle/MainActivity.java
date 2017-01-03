@@ -1,8 +1,8 @@
 package com.lft.understandingandroidlifecycle;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
@@ -40,7 +40,8 @@ import android.view.View;
  */
 public class MainActivity extends AppCompatActivity {
 
-    private static String TAG = MainActivity.class.getSimpleName();
+
+    private static final String TAG = MainActivity.class.getSimpleName();
 
     /**
      * This is the first callback and called when the activity is first created.UI is not visible to users
@@ -49,18 +50,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.i(TAG, "OnCreate");
+        Log.i(TAG, "onCreate: ");
     }
 
-    /**
-     * The paused activity does not receive user input and cannot execute any code and called
-     * when the current activity is being paused and the previous activity is being resumed.
-     * Activity is preparing itself to go in background and will not receive any user interaction
-     */
     @Override
     protected void onPause() {
         super.onPause();
-        Log.i(TAG, "OnPause");
+        Log.i(TAG, "onPause: ");
     }
 
     /**
@@ -77,8 +73,8 @@ public class MainActivity extends AppCompatActivity {
      */
     @Override
     protected void onDestroy() {
-        super.onDestroy();
         Log.i(TAG, "OnDestroy");
+        super.onDestroy();
     }
 
     /**
