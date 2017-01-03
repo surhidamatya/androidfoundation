@@ -47,7 +47,6 @@ public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.Movi
                 .into(holder.ivMovieImage);
         holder.tvmovieReleaseDate.setText(movieListingDetailsArrayList.get(position).getReleaseDate());
         holder.tvMovieRatings.setText("" + movieListingDetailsArrayList.get(position).getVoteAverage());
-
         holder.rlMovieContainer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,6 +55,7 @@ public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.Movi
                 }
             }
         });
+
     }
 
     @Override

@@ -14,5 +14,4 @@ public interface MovieListingService {
     @GET("upcoming")
     Call<MovieListing> getUpcomingMovies(@Query("api_key") String apiKey);
 
-
 }

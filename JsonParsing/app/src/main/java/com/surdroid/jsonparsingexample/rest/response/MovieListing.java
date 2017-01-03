@@ -8,10 +8,16 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
 
-public class MovieListing implements Parcelable {
+public class MovieListing implements Parcelable{
 
-    @SerializedName("page")
+    @SerializedName("pages")
     private Integer page;
+
+    @SerializedName("total_pages")
+    private Integer totalPages;
+
+    @SerializedName("total_results")
+    private Integer totalResults;
 
     @SerializedName("results")
     private ArrayList<Result> results = new ArrayList<Result>();
@@ -19,11 +25,22 @@ public class MovieListing implements Parcelable {
     @SerializedName("dates")
     private Dates dates;
 
-    @SerializedName("total_pages")
-    private Integer totalPages;
+    protected MovieListing(Parcel in) {
+        results = in.createTypedArrayList(Result.CREATOR);
+        dates = in.readParcelable(Dates.class.getClassLoader());
+    }
 
-    @SerializedName("total_results")
-    private Integer totalResults;
+    public static final Creator<MovieListing> CREATOR = new Creator<MovieListing>() {
+        @Override
+        public MovieListing createFromParcel(Parcel in) {
+            return new MovieListing(in);
+        }
+
+        @Override
+        public MovieListing[] newArray(int size) {
+            return new MovieListing[size];
+        }
+    };
 
     /**
      * @return The page
@@ -97,21 +114,6 @@ public class MovieListing implements Parcelable {
 
     /* ## Parcelable Implementation ## */
 
-    protected MovieListing(Parcel in) {
-    }
-
-    public static final Creator<MovieListing> CREATOR = new Creator<MovieListing>() {
-        @Override
-        public MovieListing createFromParcel(Parcel in) {
-            return new MovieListing(in);
-        }
-
-        @Override
-        public MovieListing[] newArray(int size) {
-            return new MovieListing[size];
-        }
-    };
-
     @Override
     public int describeContents() {
         return 0;
@@ -119,5 +121,7 @@ public class MovieListing implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeTypedList(results);
+        parcel.writeParcelable(dates, i);
     }
 }
