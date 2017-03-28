@@ -26,7 +26,7 @@ public class ListImplicitActivity extends AppCompatActivity {
      */
     public void makeCall(View v) {
         Intent callIntent = new Intent(Intent.ACTION_CALL);
-        callIntent.setData(Uri.parse("tel:0377778888"));
+        callIntent.setData(Uri.parse("tel:" + "0377778888"));
         startActivity(callIntent);
 
     }

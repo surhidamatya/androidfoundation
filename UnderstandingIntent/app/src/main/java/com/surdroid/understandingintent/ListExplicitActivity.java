@@ -3,6 +3,7 @@ package com.surdroid.understandingintent;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -13,6 +14,7 @@ import android.widget.TextView;
  */
 public class ListExplicitActivity extends AppCompatActivity {
 
+    private static final String TAG = ListExplicitActivity.class.getSimpleName();
     LinearLayout llLayoutPassIntent;
     EditText edtValueOne;
     EditText edtValueTwo;
@@ -81,12 +83,12 @@ public class ListExplicitActivity extends AppCompatActivity {
         startActivityForResult(passIntentValue, RESULT_CODE);
 
     }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        Log.i(TAG, "onActivityResult: " + requestCode + "::" + resultCode);
         // check if the request code is same as what is passed  here it is 2
-        if (requestCode == RESULT_CODE) {
+        if (resultCode == RESULT_CODE) {
             txtVwResult.setVisibility(View.VISIBLE);
             String message = data.getStringExtra(Constants.VALUE_ONE);
             txtVwResult.setText(message);
