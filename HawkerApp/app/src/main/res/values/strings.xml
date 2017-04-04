@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">HawkerApp</string>
+    <string name="full_name">Full name</string>
+    <string name="full_address">Full address</string>
+    <string name="phone_number">Phone number</string>
+    <string name="ward_number">Ward number</string>
+    <string name="near_known_places">Near known places or name person</string>
+    <string name="nagarik">Nagarik</string>
+    <string name="republica">Republica</string>
+    <string name="shukrabar">Shukrabar</string>
+    <string name="no_internet">Please make sure you are connected to internet</string>
+</resources>

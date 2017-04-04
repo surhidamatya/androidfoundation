@@ -2,6 +2,7 @@ package com.surdroid.recyclerviewexample;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 
@@ -18,14 +19,21 @@ public class MainActivity extends AppCompatActivity {
 
         rvMovieListing = (RecyclerView) findViewById(R.id.rv_example_view);
 
-       /* LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        rvMovieListing.setLayoutManager(linearLayoutManager);
-*/
-       /* GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 3);
-        rvMovieListing.setLayoutManager(gridLayoutManager);*/
-
         StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
         rvMovieListing.setLayoutManager(staggeredGridLayoutManager);
+
+ /*
+        StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
+        rvMovieListing.setLayoutManager(staggeredGridLayoutManager);
+
+         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity.this);
+        rvMovieListing.setLayoutManager(linearLayoutManager);
+
+         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
+        rvMovieListing.setLayoutManager(gridLayoutManager);
+
+
+        */
 
         rvMovieListing.setAdapter(new MovieListingAdapter(getMovieList()));
 

@@ -9,7 +9,6 @@ public class MovieListingDetail {
     private String movieName;
     private int moviePosterPath;
 
-
     public MovieListingDetail(String movieName, int moviePosterPath) {
         this.movieName = movieName;
         this.moviePosterPath = moviePosterPath;

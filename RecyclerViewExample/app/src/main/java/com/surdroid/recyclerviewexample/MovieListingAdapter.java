@@ -17,6 +17,7 @@ public class MovieListingAdapter extends RecyclerView.Adapter<MovieListingAdapte
 
     private ArrayList<MovieListingDetail> movieListingDetailArrayList;
 
+
     public MovieListingAdapter(ArrayList<MovieListingDetail> movieListingDetailArrayList) {
         this.movieListingDetailArrayList = movieListingDetailArrayList;
     }

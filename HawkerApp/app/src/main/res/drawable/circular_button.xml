@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <solid android:color="@color/divider" />
+
+    <corners android:radius="@dimen/dimens_4x" />
+    <padding
+        android:bottom="@dimen/dimens_2x"
+        android:left="@dimen/dimens_2x"
+        android:right="@dimen/dimens_2x"
+        android:top="@dimen/dimens_2x" />
+
+
+</shape>
