@@ -4,6 +4,7 @@ import com.surdroid.jsonparsingexample.rest.response.MovieListing;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.POST;
 import retrofit2.http.Query;
 
 /**

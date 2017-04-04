@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
 
-public class MovieListing implements Parcelable{
+public class MovieListing implements Parcelable {
 
-    @SerializedName("pages")
+    @SerializedName("page")
     private Integer page;
 
     @SerializedName("total_pages")
