@@ -36,7 +36,7 @@ public class ExampleService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.i(TAG + "---", "onStartCommand");
-        simulateLowMemory();
+        //simulateLowMemory();
         /**
          * Service is not restarted. Used for services which are periodically triggered anyway.
          * The service is only restarted if the runtime has pending startService() calls since the service termination.

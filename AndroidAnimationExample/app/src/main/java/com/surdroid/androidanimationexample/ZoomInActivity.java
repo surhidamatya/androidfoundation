@@ -53,7 +53,7 @@ public class ZoomInActivity extends Activity implements AnimationListener {
 
 		// check for zoom in animation
 		if (animation == animZoomIn) {
-            imgPoster.startAnimation(animZoomOut);
+
 
 		}
 

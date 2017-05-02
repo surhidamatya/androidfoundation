@@ -36,12 +36,6 @@
         android:repeatCount="infinite"
         android:repeatMode="restart"
         android:toDegrees="360" />
-    <translate
-        android:duration="800"
-        android:fillAfter="true"
-        android:fromYDelta="0%p"
-        android:startOffset="2700"
-        android:toYDelta="-70%p" />
 
 
 

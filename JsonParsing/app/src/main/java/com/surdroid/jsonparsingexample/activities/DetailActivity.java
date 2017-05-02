@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.surdroid.jsonparsingexample.R;
 import com.surdroid.jsonparsingexample.rest.response.Result;
@@ -16,6 +18,8 @@ public class DetailActivity extends AppCompatActivity {
     private static final String TAG = DetailActivity.class.getSimpleName();
 
     Toolbar toolbar;
+    TextView tvToolbarTitle;
+    ImageView ivToolBarIcon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +27,10 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
+        tvToolbarTitle = (TextView) toolbar.findViewById(R.id.tv_title);
 
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Movie Detail");
+        tvToolbarTitle.setText("");
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
