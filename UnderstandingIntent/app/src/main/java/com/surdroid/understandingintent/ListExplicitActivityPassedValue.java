@@ -28,6 +28,7 @@ public class ListExplicitActivityPassedValue extends AppCompatActivity {
         btnPassValue = (Button) findViewById(R.id.btn_pass_value);
 
         txtvwPassedValue = (TextView) findViewById(R.id.txtvw_passed_value);
+
         Intent intent = getIntent();
         if (intent != null) {
             userName = intent.getStringExtra(Constants.VALUE_ONE);

@@ -25,7 +25,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void explicitIntent(View v) {
-        startActivity(new Intent(this, ListExplicitActivity.class));
+        Intent startExplicitActivity = new Intent(MainActivity.this, ListExplicitActivity.class);
+        startActivity(startExplicitActivity);
 
     }
 
