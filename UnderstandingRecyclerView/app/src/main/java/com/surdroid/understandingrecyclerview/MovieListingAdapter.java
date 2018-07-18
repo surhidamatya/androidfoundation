@@ -18,16 +18,17 @@ public class MovieListingAdapter extends RecyclerView.Adapter<MovieListingAdapte
 
     private ArrayList<MovieListingDetail> movieListingDetailArrayList;
 
-
     public MovieListingAdapter(ArrayList<MovieListingDetail> movieListingDetailArrayList) {
         this.movieListingDetailArrayList = movieListingDetailArrayList;
     }
 
     @Override
     public MovieListingViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+
         View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.movie_listing, parent, false);
         MovieListingViewHolder rcv = new MovieListingViewHolder(layoutView);
         return rcv;
+
     }
 
     @Override
@@ -49,8 +50,8 @@ public class MovieListingAdapter extends RecyclerView.Adapter<MovieListingAdapte
         public MovieListingViewHolder(View itemView) {
             super(itemView);
 
-            ivMoviePoster = (ImageView) itemView.findViewById(R.id.iv_movie_poster);
-            tvMovieName = (TextView) itemView.findViewById(R.id.tv_movie_name);
+            ivMoviePoster = itemView.findViewById(R.id.iv_movie_poster);
+            tvMovieName = itemView.findViewById(R.id.tv_movie_name);
         }
     }
 }
