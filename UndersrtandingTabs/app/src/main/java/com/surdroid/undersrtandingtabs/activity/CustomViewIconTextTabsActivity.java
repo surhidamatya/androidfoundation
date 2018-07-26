@@ -31,14 +31,14 @@ public class CustomViewIconTextTabsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_view_icon_text_tabs);
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        viewPager = (ViewPager) findViewById(R.id.viewpager);
+        viewPager = findViewById(R.id.viewpager);
         setupViewPager(viewPager);
 
-        tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout = findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
         setupTabIcons();
     }
@@ -66,6 +66,7 @@ public class CustomViewIconTextTabsActivity extends AppCompatActivity {
 
     /**
      * Adding fragments to ViewPager
+     *
      * @param viewPager
      */
     private void setupViewPager(ViewPager viewPager) {
